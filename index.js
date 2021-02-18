@@ -8,8 +8,8 @@ request('https://codeforces.com/blog/entry/87934', (error, response, html) =>{
         const content = $('.content');
         // console.log(content.html());
         // console.log(content.text());
-
-        const output = content.find('h1').text();
+        
+        const output = content.find('<h1>').text();
         console.log(output);
 
     }
