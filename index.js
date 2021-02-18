@@ -3,7 +3,11 @@ const cheerio = require('cheerio');
 
 request('https://javascript.info/async-await', (error, response, html) =>{
     if(!error && response.statusCode === 200){
-        console.log(html);
+        const $ = cheerio.load(html);
+
+        const content = $('.content');
+        console.log(content);
+
     }
 });
 
