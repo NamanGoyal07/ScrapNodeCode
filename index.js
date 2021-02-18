@@ -6,7 +6,7 @@ request('https://javascript.info/async-await', (error, response, html) =>{
         const $ = cheerio.load(html);
 
         const content = $('.content');
-        console.log(content);
+        console.log(content.html());
 
     }
 });
